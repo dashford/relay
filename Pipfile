@@ -1,5 +1,6 @@
 [packages]
-
+paho-mqtt = "==1.5.1"
+python-dotenv = "==0.9.0"
 
 [requires]
-python_version = "3.9"
+python_version = "3.6"
