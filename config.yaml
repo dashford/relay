@@ -1,0 +1,10 @@
+subscribers:
+  - type: WSDCGQ12LM
+    topic: test/kitchen/snug
+    processors:
+      - type: MQTT
+        publish_topic: brompton/test/humidity
+        attribute: humidity
+      - type: MQTT
+        publish_topic: brompton/test/temperature
+        attribute: temperature
