@@ -1,10 +1,22 @@
 subscribers:
   - type: WSDCGQ12LM
-    topic: test/kitchen/snug
+    topic: zigbee2mqtt/aqara/wsdcgq12lm/sitting-room
     processors:
       - type: MQTT
-        publish_topic: brompton/test/humidity
+        publish_topic: brompton/sitting-room/humidity
         attribute: humidity
       - type: MQTT
-        publish_topic: brompton/test/temperature
+        publish_topic: brompton/sitting-room/temperature
         attribute: temperature
+      - type: MQTT
+        publish_topic: brompton/sitting-room/pressure
+        attribute: pressure
+      - type: MQTT
+        publish_topic: brompton/sitting-room/battery
+        attribute: battery
+      - type: MQTT
+        publish_topic: brompton/sitting-room/voltage
+        attribute: voltage
+      - type: MQTT
+        publish_topic: brompton/sitting-room/link_quality
+        attribute: link_quality
