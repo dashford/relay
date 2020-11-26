@@ -3,6 +3,7 @@ services:
   relay:
     image: dashford/relay:latest
     container_name: relay
+    env_file: .env
     volumes:
       - type: bind
         source: ./config/config.yaml
