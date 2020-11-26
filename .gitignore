@@ -130,4 +130,4 @@ dmypy.json
 
 .idea/
 
-config.yaml
+config/config.yaml

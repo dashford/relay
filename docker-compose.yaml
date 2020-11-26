@@ -1,11 +1,9 @@
 version: '3.8'
 services:
   relay:
-    build: .
+    image: dashford/relay:latest
     container_name: relay
     volumes:
-    - relay:/usr/src/app
-
-volumes:
-  relay:
-    driver: local
+      - type: bind
+        source: ./config/config.yaml
+        target: /usr/src/app/config/config.yaml

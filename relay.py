@@ -24,7 +24,7 @@ def _load_env():
 
 
 def _load_configuration():
-    with open('config.yaml') as file:
+    with open('config/config.yaml') as file:
         return yaml.load(file)
 
 
