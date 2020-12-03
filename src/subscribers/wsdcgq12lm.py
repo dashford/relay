@@ -8,22 +8,34 @@ class WSDCGQ12LM:
         self._payload = None
 
     def _get_battery(self):
-        return self._payload['battery']
+        if 'battery' in self._payload:
+            return self._payload['battery']
+        return 0
 
     def _get_humidity(self):
-        return self._payload['humidity']
+        if 'humidity' in self._payload:
+            return self._payload['humidity']
+        return 0
 
     def _get_link_quality(self):
-        return self._payload['linkquality']
+        if 'linkquality' in self._payload:
+            return self._payload['linkquality']
+        return 0
 
     def _get_pressure(self):
-        return self._payload['pressure']
+        if 'pressure' in self._payload:
+            return self._payload['pressure']
+        return 0
 
     def _get_temperature(self):
-        return self._payload['temperature']
+        if 'temperature' in self._payload:
+            return self._payload['temperature']
+        return 0
 
     def _get_voltage(self):
-        return self._payload['voltage']
+        if 'voltage' in self._payload:
+            return self._payload['voltage']
+        return 0
 
     def callback(self, client, userdata, message):
         self._logger.debug('WSDCGQ12LM callback invoked for ' + message.topic + ' topic')
